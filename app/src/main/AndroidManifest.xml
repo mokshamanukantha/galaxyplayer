@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.musicplayer" >
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".MusicPlayer.MusicPlayer"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MusicPlayer.MusicPlayerMainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".MusicPlayer.PlaySongActivityMusicPlayer"/>
+        <activity
+            android:name=".Youtube.YouTubePlayerActivity" >
+        </activity>
+        <activity
+            android:name=".VideoPlayer.VideoPlayerActivty" >
+        </activity>
+        <activity android:name=".Youtube.YouTubeCategoryActivty"/>
+        <activity android:name=".Youtube.YouTubeCategoryResultsActivty"/>
+        <activity android:name=".Youtube.YouTubeVideoPlayerActivty"/>
+        <activity android:name=".Youtube.YouTubeRegionWiseResultsActivty"/>
+        <activity android:name=".Youtube.YouTubeRegionCategoryWiseActivity"/>
+        <activity android:name=".Youtube.YouTubeRelatedActivty"/>
+        <activity android:name=".Youtube.YouTubeRelateResultsActivty"/>
+        <activity android:name=".LogingMainActivty"/>
+        <activity android:name=".Youtube.YouTubeFavoritesActivity"/>
+        <activity android:name=".Youtube.YouTubeWatchLaterActivty"/>
+        <activity android:name=".MusicPlayer.AlbumDetailActivity"/>
+        <activity android:name=".Youtube.YouTubePlaylistActivty"/>
+        <activity android:name=".Youtube.YouTubeUploadActivty"/>
+        <activity android:name=".Youtube.YouTubeExtrasActivty"/>
+        <activity android:name=".MusicPlayer.PlaylistResultActivity"/>
+        <activity
+            android:name=".Radio.SchedulerHome"
+            >
+        </activity>
+        <activity
+            android:name=".Radio.DaySelect"
+            >
+        </activity>
+        <activity android:name=".MusicPlayer.ArtistDetailActivty"/>
+        <activity android:name=".VideoPlayer.VideoViewActivity"/>
+        <activity android:name=".Radio.ChannelCollection"/>
+        <activity android:name=".Radio.Player"/>
+        <activity android:name=".Radio.RadioMainActivty"/>
+        <activity android:name=".Radio.CountryRadioMainActivity"/>
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/album_art"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/song"
+        app:border_width="3dp"
+        app:border_color="#009688"/>
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/album_art"
+        android:textColor="#88ffffff"
+        android:layout_marginTop="1dip"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:maxLength="80"
+        android:ellipsize="end"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/song_title"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_toRightOf="@+id/album_art"
+        android:textColor="#88ffffff"
+        android:maxLines="1"
+        android:maxLength="80"
+        android:ellipsize="end"
+        android:textSize="18sp" />
+
+</RelativeLayout>
