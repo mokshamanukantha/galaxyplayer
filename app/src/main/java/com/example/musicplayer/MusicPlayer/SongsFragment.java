@@ -97,6 +97,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
         if(mPlayer.isPlaying())
         {
             bPlay.setImageResource(R.drawable.ic_pause_white);
+            updateProgressBar();
         }
         else
             bPlay.setImageResource(R.drawable.ic_play_white);
