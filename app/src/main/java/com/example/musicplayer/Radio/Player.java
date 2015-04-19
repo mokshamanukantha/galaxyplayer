@@ -6,7 +6,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -33,6 +35,7 @@ public class Player extends ActionBarActivity {
     AudioManager audioManager;
     private VisualizerView mVisualizerView;
     private MediaPlayer mSilentPlayer;
+    WifiManager.WifiLock wifiLock;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -61,6 +64,12 @@ public class Player extends ActionBarActivity {
 
         mediaPlayer = new MediaPlayer();
         mVisualizerView = (VisualizerView) findViewById(R.id.visualizerView);
+        mediaPlayer.setWakeMode(this,
+                PowerManager.PARTIAL_WAKE_LOCK);
+        wifiLock = ((WifiManager) getSystemService(Context.WIFI_SERVICE))
+                .createWifiLock(WifiManager.WIFI_MODE_FULL, "mylock");
+
+        wifiLock.acquire();
 
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
@@ -276,7 +285,9 @@ public class Player extends ActionBarActivity {
     }
 
     private void init() {
-        mVisualizerView.link(mediaPlayer);
+        if(mediaPlayer.isPlaying()) {
+            mVisualizerView.link(mediaPlayer);
+        }
         addBarGraphRenderers();
     }
 
@@ -290,6 +301,7 @@ public class Player extends ActionBarActivity {
     @Override
     protected void onDestroy()
     {
+        wifiLock.release();
         cleanUp();
         super.onDestroy();
     }

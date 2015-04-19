@@ -126,6 +126,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
             songProgressBar.setProgress(0);
             songProgressBar.setMax(100);
             updateProgressBar();
+
             if (mPlayer.isPlaying()) {
                 if (mPlayer.status() != null) {
                     mPlayer.pauseSong();
@@ -140,6 +141,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
         }
         if (v.getId() == R.id.btnBackward) {
             sTitle.setText("" + mPlayer.getSongTitle());
+            updateInfo();
             currentSongIndex = mPlayer.getCurrentSongIndex();
             if (currentSongIndex > 0) {
                 mPlayer.setSong(currentSongIndex - 1);
@@ -153,6 +155,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
         }
         if (v.getId() == R.id.btnForward) {
             sTitle.setText("" + mPlayer.getSongTitle());
+            updateInfo();
             currentSongIndex = mPlayer.getCurrentSongIndex();
             if (currentSongIndex < (songList.size() - 1)) {
                 mPlayer.setSong(currentSongIndex + 1);
@@ -182,6 +185,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
     public boolean onLongClick(View v) {
         if (v.getId() == R.id.btnBackward) {
             sTitle.setText("" + mPlayer.getSongTitle());
+            updateInfo();
             int currentPosition = (int) mPlayer.getCurrentPosition();
             if (currentPosition - seekBackwardTime >= 0) {
                 mPlayer.seek(currentPosition - seekBackwardTime);
@@ -191,6 +195,7 @@ public class SongsFragment extends Fragment implements AdapterView.OnItemClickLi
         }
         if (v.getId() == R.id.btnForward) {
             sTitle.setText("" + mPlayer.getSongTitle());
+            updateInfo();
             int currentPosition = (int) mPlayer.getCurrentPosition();
             if (currentPosition + seekForwardTime <= mPlayer.getDuration()) {
                 mPlayer.seek(currentPosition + seekForwardTime);
