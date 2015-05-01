@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.musicplayer" >
+    package="com.galaxy.musicplayer" >
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
@@ -17,55 +17,80 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity">
+        <activity android:name=".Youtube.SplashScreenActivty"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity
             android:name=".MusicPlayer.MusicPlayerMainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".MusicPlayer.PlaySongActivityMusicPlayer"/>
+        <activity android:name=".MusicPlayer.PlaySongActivityMusicPlayer"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Youtube.YouTubePlayerActivity" >
+            android:name=".Youtube.YouTubePlayerActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".VideoPlayer.VideoPlayerActivty" >
+            android:name=".VideoPlayer.VideoPlayerActivty"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Youtube.YouTubeCategoryActivty"/>
-        <activity android:name=".Youtube.YouTubeCategoryResultsActivty"/>
-        <activity android:name=".Youtube.YouTubeVideoPlayerActivty"/>
-        <activity android:name=".Youtube.YouTubeRegionWiseResultsActivty"/>
-        <activity android:name=".Youtube.YouTubeRegionCategoryWiseActivity"/>
-        <activity android:name=".Youtube.YouTubeRelatedActivty"/>
-        <activity android:name=".Youtube.YouTubeRelateResultsActivty"/>
-        <activity android:name=".LogingMainActivty"/>
-        <activity android:name=".Youtube.YouTubeFavoritesActivity"/>
-        <activity android:name=".Youtube.YouTubeWatchLaterActivty"/>
-        <activity android:name=".MusicPlayer.AlbumDetailActivity"/>
-        <activity android:name=".Youtube.YouTubePlaylistActivty"/>
-        <activity android:name=".Youtube.YouTubeUploadActivty"/>
-        <activity android:name=".Youtube.YouTubeExtrasActivty"/>
-        <activity android:name=".MusicPlayer.PlaylistResultActivity"/>
-        <activity
-            android:name=".Radio.SchedulerHome"
-            >
-        </activity>
+        <activity android:name=".Youtube.YouTubeCategoryActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeCategoryResultsActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeVideoPlayerActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeRegionWiseResultsActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeRegionCategoryWiseActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeRelatedActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeRelateResultsActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LogingMainActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeFavoritesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeWatchLaterActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MusicPlayer.AlbumDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubePlaylistActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeUploadActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Youtube.YouTubeExtrasActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MusicPlayer.PlaylistResultActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Radio.DaySelect"
-            >
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".MusicPlayer.ArtistDetailActivty"/>
-        <activity android:name=".VideoPlayer.VideoViewActivity"/>
-        <activity android:name=".Radio.ChannelCollection"/>
-        <activity android:name=".Radio.Player"/>
-        <activity android:name=".Radio.RadioMainActivty"/>
-        <activity android:name=".Radio.CountryRadioMainActivity"/>
-        <activity android:name=".Radio.CoutryRadioCategoryResultActivty"/>
-        <activity android:name=".Radio.CountryRadioPlayer"/>
+        <activity android:name=".MusicPlayer.ArtistDetailActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VideoPlayer.VideoViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.ChannelCollection"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.Player"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.RadioMainActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.CountryRadioMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.CoutryRadioCategoryResultActivty"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Radio.CountryRadioPlayer"
+            android:screenOrientation="portrait"/>
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
     </application>

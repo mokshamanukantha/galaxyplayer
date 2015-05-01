@@ -19,12 +19,12 @@
             android:id="@+id/channelname"
             android:layout_weight="4" />
 
-            <com.example.musicplayer.visualizer.VisualizerView
+            <com.galaxy.musicplayer.visualizer.VisualizerView
                 android:id="@+id/visualizerView"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
-            </com.example.musicplayer.visualizer.VisualizerView>
+            </com.galaxy.musicplayer.visualizer.VisualizerView>
 
         <SeekBar
             android:id="@+id/volume"

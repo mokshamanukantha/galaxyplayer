@@ -1,4 +1,4 @@
-package com.example.musicplayer;
+package com.galaxy.musicplayer;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
