@@ -86,6 +86,14 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Radio.CountryRadioPlayer"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Lyrics.StoreHome"/>
+        <activity android:name=".Lyrics.AddNewSongDetails"/>
+        <activity android:name=".Lyrics.EditSong"/>
+        <activity android:name=".Lyrics.MyLyrics"/>
+        <activity android:name=".Lyrics.OnlineLyrics"/>
+        <activity android:name=".Lyrics.ViewSongList"/>
+        <activity android:name=".Lyrics.WatchLyrics"/>
+        <activity android:name=".Lyrics.WriteLyrics"/>
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
     </application>
