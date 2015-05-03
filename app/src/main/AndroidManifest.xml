@@ -71,14 +71,9 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".MusicPlayer.PlaylistResultActivity"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name=".Radio.DaySelect"
-            android:screenOrientation="portrait">
-        </activity>
         <activity android:name=".MusicPlayer.ArtistDetailActivty"
             android:screenOrientation="portrait"/>
-        <activity android:name=".VideoPlayer.VideoViewActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".VideoPlayer.VideoViewActivity" />
         <activity android:name=".Radio.ChannelCollection"
             android:screenOrientation="portrait"/>
         <activity android:name=".Radio.Player"
